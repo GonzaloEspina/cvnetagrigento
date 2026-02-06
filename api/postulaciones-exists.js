@@ -1,6 +1,6 @@
-const { POSTULACIONES_TABLE, appsheetAction, normalizeRows } = require("./_utils");
+import { POSTULACIONES_TABLE, appsheetAction, normalizeRows } from "./_utils.js";
 
-module.exports = async (req, res) => {
+export default async (req, res) => {
   try {
     const dni = String(req.query.dni || "").trim();
     const empleo = String(req.query.empleo || "").trim();

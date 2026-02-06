@@ -1,6 +1,6 @@
-const { BASE_DATOS_TABLE, appsheetAction, normalizeRows } = require("./_utils");
+import { BASE_DATOS_TABLE, appsheetAction, normalizeRows } from "./_utils.js";
 
-module.exports = async (req, res) => {
+export default async (req, res) => {
   try {
     const limit = Number(req.query.limit || 50);
     const result = await appsheetAction(BASE_DATOS_TABLE, {

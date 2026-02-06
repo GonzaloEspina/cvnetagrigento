@@ -44,7 +44,7 @@ function normalizeRows(data) {
   return [];
 }
 
-module.exports = {
+export {
   BASE_DATOS_TABLE,
   POSTULACIONES_TABLE,
   EMPLEOS_TABLE,
