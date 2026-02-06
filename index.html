@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agrigento | Postulación</title>
+  <link rel="icon" type="image/svg+xml" href="/Logos/icono_redondo.svg" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <header class="card__header">
+        <img src="/Logos/Color_completo.svg" alt="Agrigento" class="logo" />
+        <h1>Postulación para <span id="empleoTitle">este empleo</span></h1>
+        <p id="empleoDescription" class="subtitle"></p>
+      </header>
+
+      <div id="alert" class="alert" role="status" aria-live="polite">
+        <div class="alert__message">
+          <span id="alertText"></span>
+        </div>
+      </div>
+
+      <form id="postulacionForm" class="form">
+        <input type="hidden" id="estadoCandidato" value="No contactado" />
+        <input type="hidden" id="notas" value="Notas" />
+        <input type="hidden" id="estadoPostulacion" value="Activa" />
+        <input type="hidden" id="fechaCreacion" />
+        <input type="hidden" id="id" />
+        <input type="hidden" id="idCandidato" />
+        <input type="hidden" id="empleo" name="Empleo" />
+
+        <div class="row three">
+          <div class="field">
+            <label for="nombre">Nombre</label>
+            <input id="nombre" name="Nombre" type="text" required />
+          </div>
+
+          <div class="field">
+            <label for="apellido">Apellido</label>
+            <input id="apellido" name="Apellido" type="text" required />
+          </div>
+
+          <div class="field">
+            <label for="dni">DNI</label>
+            <input id="dni" name="DNI" type="text" inputmode="numeric" required />
+          </div>
+        </div>
+
+        <input id="edad" name="Edad" type="hidden" />
+
+        <div id="extraFields" class="extra hidden">
+          <div class="row three birth-row">
+            <div class="field" data-extra-field>
+              <label for="fechaNacimiento">Fecha de Nacimiento</label>
+              <input id="fechaNacimiento" name="Fecha de Nacimiento" type="date" required />
+            </div>
+
+            <div class="field">
+              <label for="correo">Correo Electrónico</label>
+              <input id="correo" name="Correo Electrónico" type="email" required />
+            </div>
+
+            <div class="field">
+              <label for="telefono">Teléfono</label>
+              <input id="telefono" name="Teléfono" type="tel" required />
+            </div>
+          </div>
+
+          <div class="row three address-row">
+            <div class="field">
+              <label for="provincia">Provincia</label>
+              <select id="provincia" name="Provincia" required>
+                <option value="">Seleccionar</option>
+                <option value="Río Negro" selected>Río Negro</option>
+                <option value="Neuquén">Neuquén</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="ciudad">Ciudad</label>
+              <select id="ciudad" name="Ciudad" required></select>
+            </div>
+
+            <div class="field">
+              <label for="direccion">Dirección</label>
+              <input id="direccion" name="Dirección" type="text" required />
+            </div>
+          </div>
+
+          <div class="row two">
+            <div class="field">
+              <label for="secundario">Tipo de Secundario</label>
+              <select id="secundario" name="Tipo de Secundario" required>
+                <option value="">Seleccionar</option>
+                <option value="Cursando">Cursando</option>
+                <option value="Secundario Comercial">Secundario Comercial</option>
+                <option value="Secundario Técnico">Secundario Técnico</option>
+                <option value="Sin Terminar">Sin Terminar</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label>Terciario y/o Universidad</label>
+              <div class="checkbox-group toggle-group">
+                <label class="toggle">
+                  <input type="checkbox" name="Terciario o Universidad" value="Terciario" />
+                  <span>Terciario</span>
+                </label>
+                <label class="toggle">
+                  <input type="checkbox" name="Terciario o Universidad" value="Universidad" />
+                  <span>Universidad</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="cv">Carga tu CV</label>
+            <input id="cv" name="Carga tu CV" type="file" accept=".pdf,.doc,.docx" />
+          </div>
+        </div>
+
+        <button id="submitBtn" type="submit" class="btn" disabled>Enviar postulación</button>
+      </form>
+
+      <div id="success" class="success hidden">
+        <h2>Gracias por tu postulación</h2>
+        <p>En breve nos comunicaremos con vos.</p>
+        <a class="btn secondary" href="https://www.instagram.com/agrigentopasteleriagourmet/">Volver a Instagram</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
